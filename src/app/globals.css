@@ -7,9 +7,20 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-ela-deep: var(--ela-deep-green);
+  --color-ela-olive: var(--ela-olive);
+  --color-ela-cream: var(--ela-cream);
+  --color-ela-obsidian: var(--ela-obsidian);
+  --color-ela-warm-white: var(--ela-warm-white);
+  --color-ela-sand: var(--ela-sand);
+  --color-ela-mid-green: var(--ela-mid-green);
+  --color-ela-light-green: var(--ela-light-green);
+  --color-ela-charcoal: var(--ela-charcoal);
+  --color-ela-steel: var(--ela-steel);
+  --color-ela-gold: var(--ela-gold);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-heading);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,24 +60,37 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Ela Future Farms — brand tokens (brandbook 2026) */
+  --ela-deep-green: #3d5a3e;
+  --ela-olive: #5c7a4b;
+  --ela-cream: #f2ede4;
+  --ela-obsidian: #1a1a1a;
+  --ela-warm-white: #faf8f5;
+  --ela-sand: #c4b89e;
+  --ela-mid-green: #4a6741;
+  --ela-light-green: #7a9e6b;
+  --ela-charcoal: #2c2c2c;
+  --ela-steel: #8a8a8a;
+  --ela-gold: #9a7b4f;
+
+  --background: var(--ela-warm-white);
+  --foreground: var(--ela-obsidian);
+  --card: var(--ela-cream);
+  --card-foreground: var(--ela-obsidian);
+  --popover: var(--ela-warm-white);
+  --popover-foreground: var(--ela-obsidian);
+  --primary: var(--ela-deep-green);
+  --primary-foreground: var(--ela-cream);
+  --secondary: oklch(0.94 0.02 145);
+  --secondary-foreground: var(--ela-obsidian);
+  --muted: oklch(0.94 0.01 90);
+  --muted-foreground: oklch(0.45 0.02 145);
+  --accent: oklch(0.92 0.02 145);
+  --accent-foreground: var(--ela-obsidian);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: oklch(0.88 0.02 120);
+  --input: oklch(0.88 0.02 120);
+  --ring: var(--ela-mid-green);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -126,5 +150,12 @@
   }
   html {
     @apply font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-heading {
+    font-family: var(--font-heading), ui-serif, Georgia, serif;
   }
 }

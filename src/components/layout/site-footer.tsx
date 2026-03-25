@@ -1,0 +1,52 @@
+import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
+
+const links = [
+  { href: "/about", label: "About" },
+  { href: "/farm", label: "Farm" },
+  { href: "/products", label: "Products" },
+  { href: "/blog", label: "Blog" },
+  { href: "/careers", label: "Careers" },
+  { href: "/contact", label: "Contact" },
+];
+
+export function SiteFooter() {
+  return (
+    <footer className="border-t border-border bg-ela-deep text-ela-cream">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+          <div className="max-w-md">
+            <p className="font-heading text-2xl lowercase tracking-tight">ela</p>
+            <p className="mt-1 text-xs font-medium uppercase tracking-[0.25em] text-ela-olive">
+              Future Farms
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-ela-cream/90">
+              Rooted in Science. Grown with Soul. AI-powered hydroponic produce for Saudi Arabia — grown locally, harvested
+              at peak freshness.
+            </p>
+          </div>
+          <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Footer">
+            {links.map((l) => (
+              <Link key={l.href} href={l.href} className="text-ela-cream/90 transition-colors hover:text-ela-cream">
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+        <Separator className="my-10 bg-ela-olive/40" />
+        <div className="flex flex-col gap-4 text-sm text-ela-cream/80 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Ela Future Farms. All rights reserved.</p>
+          <p>
+            <a href="mailto:hello@theela.farm" className="underline-offset-4 hover:underline">
+              hello@theela.farm
+            </a>
+            <span className="mx-2 text-ela-olive/60">|</span>
+            <a href="https://www.theela.farm" className="underline-offset-4 hover:underline" rel="noreferrer">
+              theela.farm
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
