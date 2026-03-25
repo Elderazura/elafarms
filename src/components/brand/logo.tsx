@@ -12,14 +12,11 @@ const variants = {
     LOGO_ASPECT,
     "h-14 w-auto sm:h-16 md:h-[4.5rem] lg:h-[6rem] xl:h-[6.75rem] 2xl:h-[7.25rem]",
   ),
-  /** Centered above hero tagline — parent should use `lg:hidden` on mobile only */
-  hero: cn(LOGO_ASPECT, "mx-auto h-[4.5rem] w-auto sm:h-20 max-h-20"),
   footer: cn(LOGO_ASPECT, "h-14 w-auto sm:h-16 lg:h-[4.25rem] max-h-[4.25rem]"),
 };
 
 const objectPosition: Record<keyof typeof variants, string> = {
   header: "object-contain object-left",
-  hero: "object-contain object-center",
   footer: "object-contain object-left",
 };
 

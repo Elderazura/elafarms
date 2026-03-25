@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { Logo } from "@/components/brand/logo";
 import { SITE_TAGLINE } from "@/lib/site";
 
 const HERO_SLIDES = [
@@ -89,10 +88,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
       </motion.div>
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-4rem)] max-w-5xl flex-col items-center justify-end gap-6 px-4 pb-[max(4rem,12vh)] pt-28 text-center sm:px-6 lg:gap-0 lg:px-8">
-        <div className="flex w-full justify-center lg:hidden">
-          <Logo variant="hero" />
-        </div>
+      <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-4rem)] max-w-5xl flex-col items-center justify-end px-4 pb-[max(4rem,12vh)] pt-28 text-center sm:px-6 lg:px-8">
         <p className="max-w-xl font-heading text-[clamp(1.35rem,3.5vw,2rem)] font-medium leading-snug tracking-tight text-ela-cream drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)]">
           {SITE_TAGLINE}
         </p>
