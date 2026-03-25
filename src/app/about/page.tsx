@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BrandLogoPng } from "@/components/brand/logo";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
 import { PageCrossLinks } from "@/components/layout/page-cross-links";
 import { brandValues, leadershipTeam, saudiAgriSummary } from "@/lib/brand-content";
@@ -183,11 +184,11 @@ export default function AboutPage() {
           </p>
         </ScrollReveal>
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          <ScrollReveal className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border shadow-lg">
-            <Image src="/brand/ela1-01.png" alt="Ela logo on deep green" fill className="object-cover" sizes="33vw" />
+          <ScrollReveal className="flex min-h-[240px] items-center justify-center rounded-2xl border border-border bg-muted/40 p-8 shadow-lg sm:min-h-[280px]">
+            <BrandLogoPng variant="mark" heightClass="h-28 sm:h-36" />
           </ScrollReveal>
-          <ScrollReveal className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border shadow-lg">
-            <Image src="/brand/ela1-03.png" alt="Ela wordmark" fill className="object-cover" sizes="33vw" />
+          <ScrollReveal className="flex min-h-[240px] items-center justify-center rounded-2xl border border-border bg-muted/40 p-8 shadow-lg sm:min-h-[280px]">
+            <BrandLogoPng variant="wordmark" heightClass="h-24 sm:h-32" />
           </ScrollReveal>
           <ScrollReveal className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border shadow-lg">
             <Image src="/brand/product-bottle-vertical.png" alt="Branded bottle in vertical farm" fill className="object-cover" sizes="33vw" />

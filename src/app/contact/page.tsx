@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { BrandLogoPng } from "@/components/brand/logo";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
 import { ContactForm } from "@/components/contact/contact-form";
 import { ContactMap } from "@/components/contact/contact-map";
@@ -112,8 +113,12 @@ export default function ContactPage() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
             <Image src="/brand/product-bottle.png" alt="" fill className="object-cover" sizes="33vw" />
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 sm:col-span-2 lg:col-span-1">
-            <Image src="/brand/ela1-01.png" alt="" fill className="object-cover" sizes="50vw" />
+          <div className="flex min-h-[200px] items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-8 sm:col-span-2 lg:col-span-1">
+            <BrandLogoPng
+              variant="mark"
+              heightClass="h-24 sm:h-32"
+              imageClassName="brightness-0 invert"
+            />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 lg:col-span-3">
             <Image src="/brand/farm-variation-4.png" alt="Ela greenhouse" fill className="object-cover" sizes="100vw" />

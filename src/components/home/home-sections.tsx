@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { BrandLogoPng } from "@/components/brand/logo";
 import { MarqueeStrip } from "@/components/home/marquee-strip";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
 import { buttonVariants } from "@/lib/button-variants";
@@ -16,7 +17,11 @@ const stats = [
   { label: "Hydroponics market CAGR to 2034", value: "9.4%" },
 ];
 
-const pillars = [
+type PillarCard =
+  | { title: string; num: string; body: string; img: string }
+  | { title: string; num: string; body: string; useLogoMark: true };
+
+const pillars: PillarCard[] = [
   {
     title: "Science",
     num: "01",
@@ -27,7 +32,7 @@ const pillars = [
     title: "Soul",
     num: "02",
     body: "Ela (എല) — leaf. Heritage shows up in how we harvest, pack, and show up for chefs and neighbours.",
-    img: "/brand/ela1-01.png",
+    useLogoMark: true,
   },
   {
     title: "Future",
@@ -200,9 +205,21 @@ function HomeSections() {
                   transition={{ type: "spring", stiffness: 380, damping: 26 }}
                   className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border/90 bg-card shadow-lg"
                 >
-                  <div className="relative aspect-[16/11] overflow-hidden">
-                    <Image src={p.img} alt="" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(min-width: 1024px) 33vw, 100vw" />
-                  </div>
+                  {"useLogoMark" in p && p.useLogoMark ? (
+                    <div className="flex aspect-[16/11] items-center justify-center bg-muted/45 p-8">
+                      <BrandLogoPng variant="mark" heightClass="h-28 sm:h-36" />
+                    </div>
+                  ) : (
+                    <div className="relative aspect-[16/11] overflow-hidden">
+                      <Image
+                        src={"img" in p ? p.img : ""}
+                        alt=""
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(min-width: 1024px) 33vw, 100vw"
+                      />
+                    </div>
+                  )}
                   <div className="flex flex-1 flex-col p-6">
                     <p className="font-mono text-xs font-medium text-ela-mid-green">{p.num}</p>
                     <h3 className="mt-1 font-heading text-2xl text-ela-deep">{p.title}</h3>
