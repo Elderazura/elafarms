@@ -26,13 +26,13 @@ const LINKS: LinkItem[] = [
     href: "/about",
     title: "Our story",
     subtitle: "Ela — leaf in Malayalam. Heritage meets desert.",
-    image: "/brand/ela1-01.png",
+    image: "/brand/farm-variation-5.png",
   },
   {
     href: "/blog",
     title: "Journal",
     subtitle: "Vision 2030, water, and life in the aisles.",
-    image: "/brand/farm-variation-5.png",
+    image: "/brand/farm-variation-2.png",
   },
   {
     href: "/careers",
@@ -72,23 +72,24 @@ export function PageCrossLinks({
             <Link
               key={item.href}
               href={item.href}
-              className="group relative flex min-h-[200px] flex-col justify-end overflow-hidden rounded-2xl border border-border/80 bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-ela-deep/30 hover:shadow-xl"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border/80 bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-ela-deep/30 hover:shadow-xl"
             >
-              <Image
-                src={item.image}
-                alt=""
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(min-width: 1024px) 33vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ela-obsidian via-ela-obsidian/55 to-transparent" />
-              <div className="relative z-10 p-6 text-ela-cream">
-                <span className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-ela-light-green">
+              <div className="relative aspect-[16/11] w-full shrink-0 overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt=""
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(min-width: 1024px) 33vw, 50vw"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-5">
+                <span className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-ela-mid-green">
                   View
                   <ArrowUpRight className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
-                <h3 className="mt-2 font-heading text-2xl tracking-tight">{item.title}</h3>
-                <p className="mt-1 max-w-xs text-sm leading-snug text-ela-cream/85">{item.subtitle}</p>
+                <h3 className="mt-2 font-heading text-xl tracking-tight text-ela-deep">{item.title}</h3>
+                <p className="mt-1 text-sm leading-snug text-muted-foreground">{item.subtitle}</p>
               </div>
             </Link>
           ))}

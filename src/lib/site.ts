@@ -3,6 +3,10 @@
 export const SITE_NAME = "Ela Future Farms";
 export const SITE_TAGLINE = "Rooted in Science. Grown with Soul.";
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.theela.farm";
+
+/** Official logo assets (PNG) — wordmark for header/footer; mark for favicon & compact UI */
+export const BRAND_LOGO_WORDMARK = "/brand/ela1-03.png";
+export const BRAND_LOGO_MARK = "/brand/ela1-01.png";
 export const CONTACT_EMAIL = "hello@theela.farm";
 
 export const socialLinks = [
@@ -38,6 +42,8 @@ export const seoKeywords = [
   "local leafy greens KSA",
   "Ela Future Farms",
   "Vision 2030 agriculture",
+  "Saudi food security",
+  "controlled environment agriculture KSA",
   "sustainable produce Riyadh",
   "strawberries hydroponic Saudi",
 ];

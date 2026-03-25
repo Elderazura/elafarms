@@ -23,7 +23,8 @@ export default function BlogIndexPage() {
               Notes from the greenhouse and the boardroom.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-              Transparent updates on how we farm, how we partner, and why local matters in the desert.
+              Transparent updates on how we farm, how we partner, and why local matters in the desert — including how Saudi
+              Arabia’s push for food security and climate-smart horticulture shows up in our daily decisions.
             </p>
           </ScrollReveal>
         </div>
@@ -70,16 +71,15 @@ export default function BlogIndexPage() {
         </div>
       </section>
 
-      <section className="relative border-b border-border py-12">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl border border-border shadow-lg">
-          <div className="relative aspect-[21/7] min-h-[140px]">
-            <Image src="/brand/farm-variation-2.png" alt="" fill className="object-cover" sizes="100vw" />
-            <div className="absolute inset-0 bg-ela-obsidian/55" />
-            <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-              <p className="max-w-2xl font-heading text-xl text-ela-cream sm:text-2xl">
-                Writing you can forward to a chef, an investor, or a neighbour — no fluff.
-              </p>
+      <section className="border-b border-border bg-muted/20 py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
+            <div className="relative aspect-[21/7] min-h-[140px]">
+              <Image src="/brand/farm-variation-2.png" alt="" fill className="object-cover" sizes="100vw" />
             </div>
+            <p className="border-t border-border px-6 py-6 text-center font-heading text-lg text-foreground sm:text-xl">
+              Writing you can forward to a chef, an investor, or a neighbour — no fluff.
+            </p>
           </div>
         </div>
       </section>

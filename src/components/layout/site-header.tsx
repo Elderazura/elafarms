@@ -72,7 +72,8 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[min(100vw-2rem,20rem)]">
               <SheetHeader>
-                <SheetTitle className="text-left font-heading text-xl">Menu</SheetTitle>
+                <Logo className="mb-2" />
+                <SheetTitle className="sr-only">Navigation menu</SheetTitle>
               </SheetHeader>
               <nav className="mt-8 flex flex-col gap-1" aria-label="Mobile">
                 {nav.map((item) => (

@@ -48,11 +48,27 @@ export default function CareersPage() {
               A small team, an outsized mission.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-              Launch phase structure mirrors the strategy: three co-founders plus key hires in growing, operations, and
-              commercial. Saudisation is integrated from the start, with training pathways for Saudi technicians in
-              partnership with agricultural institutes.
+              Launch phase structure mirrors the strategy: three co-founders — Mohamed Afsal (Managing Director), Mohamed
+              Irfan (Chief Operations Officer), and Salith Rashnad (Chief Technology Officer) — plus key hires in growing,
+              operations, and commercial. Saudisation is integrated from the start, with training pathways for Saudi
+              technicians in partnership with agricultural institutes.
+            </p>
+            <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">
+              Saudi Arabia’s agricultural roadmap needs operators who respect data as much as plants: if you want to help
+              build local supply chains that rival imports on quality, you are in the right place.
             </p>
           </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-muted/30 py-14">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-ela-mid-green">Why this work matters in KSA</p>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Vision 2030 and the National Strategy for Agriculture emphasise private-sector participation, water-smart
+            production, and skills for young Saudis. Ela is a hands-on place to learn controlled-environment agriculture —
+            not theory on a slide, but pH, EC, harvest windows, and customer promises.
+          </p>
         </div>
       </section>
 

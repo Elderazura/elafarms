@@ -58,7 +58,6 @@ export async function BlogTeaser() {
                 ) : (
                   <div className="h-full bg-ela-deep/10" />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-ela-obsidian/40 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
               <div className="flex flex-1 flex-col p-6">
                 <time className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{post.date}</time>

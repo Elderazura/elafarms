@@ -58,6 +58,10 @@ export default function ContactPage() {
               </a>
               . We promise fewer buzzwords than your average pitch deck.
             </p>
+            <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">
+              Whether you are planning imports replacement for a hotel group or exploring how Saudi-grown produce fits your
+              retail set, we will meet you with numbers, harvest calendars, and the same honesty we bring to the farm floor.
+            </p>
           </ScrollReveal>
         </div>
       </section>
@@ -112,13 +116,12 @@ export default function ContactPage() {
             <Image src="/brand/ela1-01.png" alt="" fill className="object-cover" sizes="50vw" />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 lg:col-span-3">
-            <Image src="/brand/farm-variation-4.png" alt="" fill className="object-cover" sizes="100vw" />
-            <div className="absolute inset-0 bg-gradient-to-t from-ela-obsidian/80 to-transparent" />
-            <p className="absolute bottom-4 left-4 font-heading text-xl text-ela-cream sm:text-2xl">
-              Still reading? You are our kind of person.
-            </p>
+            <Image src="/brand/farm-variation-4.png" alt="Ela greenhouse" fill className="object-cover" sizes="100vw" />
           </div>
         </div>
+        <p className="mx-auto mt-8 max-w-xl text-center text-sm text-ela-cream/70">
+          Still reading? You are our kind of person.
+        </p>
       </section>
 
       <PageCrossLinks excludeHref="/contact" title="Wander the site" eyebrow="More fun" />

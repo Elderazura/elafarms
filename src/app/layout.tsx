@@ -2,10 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Geist_Mono, Poppins } from "next/font/google";
 import { OrganizationJsonLd } from "@/components/seo/json-ld";
 import { AppProviders } from "@/components/providers/app-providers";
-import { GrainOverlay } from "@/components/GrainOverlay";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
-import { CONTACT_EMAIL, SITE_NAME, SITE_TAGLINE, SITE_URL, seoKeywords } from "@/lib/site";
+import { BRAND_LOGO_MARK, CONTACT_EMAIL, SITE_NAME, SITE_TAGLINE, SITE_URL, seoKeywords } from "@/lib/site";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -90,8 +89,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/brand/ela1-03.png",
-    apple: "/brand/ela1-03.png",
+    icon: BRAND_LOGO_MARK,
+    apple: BRAND_LOGO_MARK,
   },
   other: {
     "contact:email": CONTACT_EMAIL,
@@ -108,7 +107,6 @@ export default function RootLayout({
       <body className="relative min-h-full flex flex-col bg-background font-sans">
         <OrganizationJsonLd />
         <AppProviders>
-          <GrainOverlay />
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />

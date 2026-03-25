@@ -80,6 +80,33 @@ function HomeSections() {
     <>
       <MarqueeStrip />
 
+      <section className="border-b border-border bg-ela-deep py-12 text-ela-cream sm:py-14">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-ela-light-green">Saudi Arabia · agriculture</p>
+              <h2 className="mt-3 max-w-3xl font-heading text-2xl tracking-tight sm:text-3xl">
+                The Kingdom is building the future of food — we are growing part of it in Riyadh.
+              </h2>
+              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ela-cream/82 sm:text-base">
+                Vision 2030 and national agricultural strategy mean real investment in greenhouses, water discipline, and
+                local supply. Ela pairs that macro story with micro precision: NFT lines, Dutch buckets, and harvest rhythms
+                designed for Saudi hospitality, retail, and families who want produce that did not circle the globe.
+              </p>
+            </div>
+            <Link
+              href="/about"
+              className={cn(
+                buttonVariants({ variant: "secondary", size: "lg" }),
+                "h-12 shrink-0 bg-ela-cream px-6 text-ela-deep hover:bg-ela-warm-white lg:self-center",
+              )}
+            >
+              Our story &amp; team
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-mesh-hero relative border-b border-border">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <div className="grid gap-14 lg:grid-cols-12 lg:items-start lg:gap-10">
@@ -115,8 +142,13 @@ function HomeSections() {
             <div className="lg:col-span-7">
               <div className="grid gap-5 sm:grid-cols-2">
                 <ScrollReveal className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border shadow-xl sm:row-span-2">
-                  <Image src="/brand/ela1-03.png" alt="Ela Future Farms wordmark" fill className="object-cover object-center" sizes="(min-width: 1024px) 35vw, 50vw" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ela-obsidian/25 to-transparent" />
+                  <Image
+                    src="/brand/farm-variation-4.png"
+                    alt="Hydroponic greens in the greenhouse"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(min-width: 1024px) 35vw, 50vw"
+                  />
                 </ScrollReveal>
                 <ScrollReveal delay={0.08} className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-lg">
                   <Image src="/brand/ela-future-farms-brand-identity (18).png" alt="Desk with hydroponic planter and branded stationery" fill className="object-cover" sizes="(min-width: 1024px) 25vw, 50vw" />
@@ -170,12 +202,10 @@ function HomeSections() {
                 >
                   <div className="relative aspect-[16/11] overflow-hidden">
                     <Image src={p.img} alt="" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(min-width: 1024px) 33vw, 100vw" />
-                    <div className="absolute left-4 top-4 rounded-full bg-ela-obsidian/82 px-3 py-1 font-mono text-xs font-medium text-ela-cream">
-                      {p.num}
-                    </div>
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="font-heading text-2xl text-ela-deep">{p.title}</h3>
+                    <p className="font-mono text-xs font-medium text-ela-mid-green">{p.num}</p>
+                    <h3 className="mt-1 font-heading text-2xl text-ela-deep">{p.title}</h3>
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
                     <Link href="/farm" className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-ela-deep">
                       See operations
@@ -190,9 +220,6 @@ function HomeSections() {
       </section>
 
       <section className="bg-banner-vision relative overflow-hidden border-b border-border py-16 sm:py-20">
-        <div className="pointer-events-none absolute inset-0 opacity-30 mix-blend-overlay">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.08\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]" />
-        </div>
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-4 sm:flex-row sm:items-center sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ela-cream/95">Vision 2030</p>
@@ -227,7 +254,6 @@ function HomeSections() {
             <div className="grid lg:grid-cols-2">
               <div className="relative min-h-[320px] lg:min-h-[420px]">
                 <Image src="/brand/farm-variation-8.png" alt="Technician in a vertical farm" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/90 lg:left-1/2" />
               </div>
               <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-14">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-ela-mid-green">Inside the farm</p>
@@ -279,18 +305,17 @@ function HomeSections() {
               transition={{ type: "spring", stiffness: 400, damping: 30 }}
               className="relative w-[min(88vw,340px)] shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-xl"
             >
-              <Link href={p.href} className="block">
-                <div className="relative aspect-[4/3] w-full">
+              <Link href={p.href} className="flex h-full flex-col">
+                <div className="relative aspect-[4/3] w-full shrink-0">
                   <Image src={p.img} alt="" fill className="object-cover" sizes="340px" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ela-obsidian/95 via-ela-obsidian/35 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-ela-cream">
-                    <h3 className="font-heading text-2xl">{p.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ela-cream/85">{p.copy}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-ela-light-green">
-                      Open line
-                      <ArrowRight className="size-3.5" />
-                    </span>
-                  </div>
+                </div>
+                <div className="flex flex-1 flex-col p-5">
+                  <h3 className="font-heading text-xl text-ela-deep">{p.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.copy}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-ela-mid-green">
+                    Open line
+                    <ArrowRight className="size-3.5" />
+                  </span>
                 </div>
               </Link>
             </motion.article>
@@ -325,39 +350,39 @@ function HomeSections() {
         </div>
       </section>
 
-      <section className="relative py-20 sm:py-28">
-        <div className="absolute inset-0">
-          <Image src="/brand/product-bottle-vertical.png" alt="" fill className="object-cover object-center" sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-r from-ela-obsidian/90 via-ela-obsidian/75 to-ela-obsidian/55" />
-        </div>
-        <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-2 lg:items-center lg:px-8">
-          <ScrollReveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-ela-light-green">Partnerships</p>
-            <h2 className="mt-4 font-heading text-3xl tracking-tight text-ela-cream sm:text-4xl lg:text-5xl">
-              Farm tours, chef tables, and co-branded menus.
-            </h2>
-            <p className="mt-4 text-lg text-ela-cream/85 leading-relaxed">
-              Let the produce speak first — then we align on supply, SLAs, and seasonal planning.
-            </p>
-            <p className="mt-4 text-sm text-ela-cream/70">hello@theela.farm · theela.farm</p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/contact" className={cn(buttonVariants({ size: "lg" }), "h-12 border-0 bg-ela-cream px-8 text-ela-deep hover:bg-ela-warm-white")}>
-                Start a conversation
-              </Link>
-              <Link
-                href="/blog"
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "lg" }),
-                  "h-12 border-ela-cream/40 bg-transparent px-8 text-ela-cream hover:bg-ela-cream/10 hover:text-ela-cream",
-                )}
-              >
-                Read the journal
-              </Link>
+      <section className="border-t border-border bg-muted/30 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="overflow-hidden rounded-3xl border border-border/80 bg-background shadow-xl">
+            <div className="grid lg:grid-cols-2">
+              <div className="relative min-h-[280px] lg:min-h-[420px]">
+                <Image
+                  src="/brand/product-bottle-vertical.png"
+                  alt="Ela branded bottle in the vertical farm"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-14">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-ela-mid-green">Partnerships</p>
+                <h2 className="mt-4 font-heading text-3xl tracking-tight sm:text-4xl lg:text-5xl">
+                  Farm tours, chef tables, and co-branded menus.
+                </h2>
+                <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+                  Let the produce speak first — then we align on supply, SLAs, and seasonal planning.
+                </p>
+                <p className="mt-4 text-sm text-muted-foreground">hello@theela.farm · theela.farm</p>
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <Link href="/contact" className={cn(buttonVariants({ size: "lg" }), "h-12 px-8")}>
+                    Start a conversation
+                  </Link>
+                  <Link href="/blog" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "h-12 px-8")}>
+                    Read the journal
+                  </Link>
+                </div>
+              </div>
             </div>
-          </ScrollReveal>
-          <ScrollReveal className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 shadow-2xl lg:aspect-auto lg:min-h-[min(50vw,380px)]">
-            <Image src="/brand/ela-future-farms-brand-identity (14).png" alt="Ela product bottle on lab counter" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
-          </ScrollReveal>
+          </div>
         </div>
       </section>
 

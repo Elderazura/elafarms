@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/brand/logo";
 import { Separator } from "@/components/ui/separator";
 
 const links = [
@@ -19,11 +20,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[90rem] px-4 py-16 sm:px-6 lg:px-10">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-md">
-            <p className="font-heading text-2xl lowercase tracking-tight">ela</p>
-            <p className="mt-1 text-xs font-medium uppercase tracking-[0.25em] text-ela-olive">
-              Future Farms
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-ela-cream/90">
+            <Logo variant="footer" className="[&_img]:brightness-0 [&_img]:invert" />
+            <p className="mt-6 text-sm leading-relaxed text-ela-cream/90">
               We grow loud flavours in quiet greenhouses. Hydroponic greens, herbs, and berries — Riyadh-born, chef-approved,
               and weirdly photogenic.
             </p>
