@@ -29,7 +29,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-ela-deep/10 bg-background/85 shadow-[0_1px_0_0_rgba(61,90,62,0.06)] backdrop-blur-xl">
-      <div className="mx-auto flex min-h-[4.75rem] items-center justify-between gap-3 px-4 py-2 sm:min-h-[5rem] sm:px-6 sm:py-2.5 lg:max-w-[90rem] lg:px-10">
+      <div className="mx-auto flex min-h-[4.75rem] items-center justify-between gap-3 px-4 py-2 sm:min-h-[5rem] sm:px-6 sm:py-2.5 lg:min-h-[6.75rem] lg:py-3 xl:min-h-[7.25rem] xl:py-3.5 lg:max-w-[90rem] lg:px-10">
         <Logo />
 
         <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Main">

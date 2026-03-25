@@ -7,9 +7,10 @@ import { cn } from "@/lib/utils";
 const LOGO_ASPECT = "aspect-[1755/1241]";
 
 const variants = {
+  /** Navbar — height drives width via aspect ratio; tuned large on desktop */
   header: cn(
     LOGO_ASPECT,
-    "h-12 w-auto sm:h-14 md:h-16 lg:h-[5.25rem] xl:h-[5.75rem] max-h-[5.75rem]",
+    "h-14 w-auto sm:h-16 md:h-[4.5rem] lg:h-[6rem] xl:h-[6.75rem] 2xl:h-[7.25rem]",
   ),
   /** Centered above hero tagline — parent should use `lg:hidden` on mobile only */
   hero: cn(LOGO_ASPECT, "mx-auto h-[4.5rem] w-auto sm:h-20 max-h-20"),
@@ -39,7 +40,7 @@ export function Logo({ className, variant = "header" }: LogoProps) {
         alt="Ela Future Farms"
         fill
         className={objectPosition[variant]}
-        sizes="(max-width: 640px) 200px, (max-width: 768px) 240px, (max-width: 1024px) 280px, 340px"
+        sizes="(max-width: 640px) 220px, (max-width: 768px) 260px, (max-width: 1024px) 320px, (max-width: 1536px) 380px, 420px"
         priority
       />
     </Link>
