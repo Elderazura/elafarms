@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
+import { PageCrossLinks } from "@/components/layout/page-cross-links";
+import { buttonVariants } from "@/lib/button-variants";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Farm",
@@ -33,6 +37,23 @@ export default function FarmPage() {
               humidity — feeding a single operational picture.
             </p>
           </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-banner-vision py-14 text-ela-cream">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 sm:flex-row sm:items-center sm:px-6 lg:px-8">
+          <p className="max-w-xl text-lg leading-relaxed text-ela-cream/95">
+            From NFT channels to Dutch buckets — one operating system for leafy crops, herbs, and the premium berry line.
+          </p>
+          <Link
+            href="/products"
+            className={cn(
+              buttonVariants({ variant: "secondary", size: "lg" }),
+              "bg-ela-cream text-ela-deep hover:bg-ela-warm-white",
+            )}
+          >
+            See product lines
+          </Link>
         </div>
       </section>
 
@@ -81,6 +102,8 @@ export default function FarmPage() {
           </div>
         </div>
       </section>
+
+      <PageCrossLinks excludeHref="/farm" title="Where to next" eyebrow="Discover" />
     </div>
   );
 }

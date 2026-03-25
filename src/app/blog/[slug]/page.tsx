@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import { PageCrossLinks } from "@/components/layout/page-cross-links";
 import { getPostBySlug, getPostSlugs } from "@/lib/blog";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -57,7 +58,19 @@ export default async function BlogPostPage({ params }: Props) {
             {post.content.trim()}
           </ReactMarkdown>
         </div>
+        <div className="mt-16 rounded-2xl border border-border bg-muted/40 p-8 text-center">
+          <p className="font-heading text-lg text-ela-deep">Want the next article in your inbox?</p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Follow along on the farm story — start with{" "}
+            <Link href="/contact" className="font-medium text-ela-deep underline-offset-4 hover:underline">
+              a conversation
+            </Link>
+            .
+          </p>
+        </div>
       </div>
+
+      <PageCrossLinks title="Explore the rest of Ela" eyebrow="Next" />
     </article>
   );
 }

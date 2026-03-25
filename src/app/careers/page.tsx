@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
+import { PageCrossLinks } from "@/components/layout/page-cross-links";
 import {
   Accordion,
   AccordionContent,
@@ -38,7 +40,7 @@ const roles = [
 export default function CareersPage() {
   return (
     <div>
-      <section className="border-b border-border bg-background py-20 sm:py-28">
+      <section className="border-b border-border bg-mesh-hero py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ela-mid-green">Careers</p>
@@ -51,6 +53,20 @@ export default function CareersPage() {
               partnership with agricultural institutes.
             </p>
           </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-ela-obsidian py-12">
+        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-8">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-white/10">
+            <Image src="/brand/farm-variation-8.png" alt="Team in the greenhouse" fill className="object-cover" sizes="33vw" />
+          </div>
+          <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-white/10">
+            <Image src="/brand/farm-variation-1.png" alt="Vertical farm aisles" fill className="object-cover" sizes="33vw" />
+          </div>
+          <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-white/10 sm:col-span-2 lg:col-span-1">
+            <Image src="/brand/farm-variation-10.png" alt="Produce close-up" fill className="object-cover" sizes="33vw" />
+          </div>
         </div>
       </section>
 
@@ -79,6 +95,8 @@ export default function CareersPage() {
           </Link>
         </ScrollReveal>
       </section>
+
+      <PageCrossLinks excludeHref="/careers" title="While you are here" eyebrow="Discover" />
     </div>
   );
 }

@@ -159,3 +159,53 @@
     font-family: var(--font-heading), ui-serif, Georgia, serif;
   }
 }
+
+@keyframes marquee-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-marquee {
+  animation: marquee-x 55s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+.bg-mesh-hero {
+  background-color: var(--ela-warm-white);
+  background-image:
+    radial-gradient(at 40% 20%, rgb(122 158 107 / 0.18) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgb(196 184 158 / 0.35) 0px, transparent 45%),
+    radial-gradient(at 0% 50%, rgb(61 90 62 / 0.08) 0px, transparent 50%);
+}
+
+.bg-banner-vision {
+  background: linear-gradient(135deg, var(--ela-deep-green) 0%, var(--ela-mid-green) 45%, var(--ela-olive) 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 18s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-banner-vision {
+    animation: none;
+    background: var(--ela-deep-green);
+  }
+}

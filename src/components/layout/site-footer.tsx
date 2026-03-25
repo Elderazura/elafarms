@@ -12,8 +12,11 @@ const links = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-ela-deep text-ela-cream">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <footer className="border-t border-ela-olive/25 bg-ela-deep text-ela-cream">
+      <div className="border-b border-white/5 bg-gradient-to-r from-ela-deep via-ela-mid-green/30 to-ela-deep py-3 text-center text-[11px] font-semibold uppercase tracking-[0.35em] text-ela-cream/90">
+        Rooted in Science · Grown with Soul
+      </div>
+      <div className="mx-auto max-w-[90rem] px-4 py-16 sm:px-6 lg:px-10">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-md">
             <p className="font-heading text-2xl lowercase tracking-tight">ela</p>
@@ -21,8 +24,8 @@ export function SiteFooter() {
               Future Farms
             </p>
             <p className="mt-4 text-sm leading-relaxed text-ela-cream/90">
-              Rooted in Science. Grown with Soul. AI-powered hydroponic produce for Saudi Arabia — grown locally, harvested
-              at peak freshness.
+              We grow loud flavours in quiet greenhouses. Hydroponic greens, herbs, and berries — Riyadh-born, chef-approved,
+              and weirdly photogenic.
             </p>
           </div>
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Footer">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
+import { PageCrossLinks } from "@/components/layout/page-cross-links";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default function BlogIndexPage() {
 
   return (
     <div>
-      <section className="border-b border-border bg-ela-cream/40 py-20 sm:py-28">
+      <section className="border-b border-border bg-mesh-hero py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ela-mid-green">Blog</p>
@@ -68,6 +69,22 @@ export default function BlogIndexPage() {
           ))}
         </div>
       </section>
+
+      <section className="relative border-b border-border py-12">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl border border-border shadow-lg">
+          <div className="relative aspect-[21/7] min-h-[140px]">
+            <Image src="/brand/farm-variation-2.png" alt="" fill className="object-cover" sizes="100vw" />
+            <div className="absolute inset-0 bg-ela-obsidian/55" />
+            <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+              <p className="max-w-2xl font-heading text-xl text-ela-cream sm:text-2xl">
+                Writing you can forward to a chef, an investor, or a neighbour — no fluff.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PageCrossLinks excludeHref="/blog" title="Beyond the journal" eyebrow="Explore" />
     </div>
   );
 }

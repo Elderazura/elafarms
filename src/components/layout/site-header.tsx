@@ -28,18 +28,18 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-ela-deep/10 bg-background/85 shadow-[0_1px_0_0_rgba(61,90,62,0.06)] backdrop-blur-xl">
+      <div className="mx-auto flex min-h-[4.75rem] items-center justify-between gap-3 px-4 py-2 sm:min-h-[5rem] sm:px-6 sm:py-2.5 lg:max-w-[90rem] lg:px-10">
         <Logo />
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Main">
+        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Main">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-foreground",
-                pathname === item.href && "bg-muted text-foreground",
+                "rounded-lg px-3 py-2 text-[13px] font-medium tracking-wide text-foreground/75 transition-colors hover:bg-ela-deep/5 hover:text-ela-deep",
+                pathname === item.href && "bg-ela-deep/10 text-ela-deep",
               )}
             >
               {item.label}
@@ -47,7 +47,19 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="hidden items-center gap-3 lg:flex">
+          <Link
+            href="/contact"
+            className={cn(
+              buttonVariants({ size: "sm" }),
+              "h-9 rounded-full px-5 text-xs font-semibold uppercase tracking-wider shadow-sm",
+            )}
+          >
+            Enquire
+          </Link>
+        </div>
+
+        <div className="flex items-center gap-2 lg:hidden">
           <Sheet>
             <SheetTrigger
               className={cn(
@@ -75,6 +87,12 @@ export function SiteHeader() {
                     {item.label}
                   </Link>
                 ))}
+                <Link
+                  href="/contact"
+                  className={cn(buttonVariants(), "mt-4 justify-center rounded-full")}
+                >
+                  Enquire
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>

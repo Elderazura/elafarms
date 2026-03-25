@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
+import { PageCrossLinks } from "@/components/layout/page-cross-links";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { buttonVariants } from "@/lib/button-variants";
@@ -43,7 +44,7 @@ const lines = [
 export default function ProductsPage() {
   return (
     <div>
-      <section className="border-b border-border bg-background py-20 sm:py-28">
+      <section className="border-b border-border bg-mesh-hero py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ela-mid-green">Products</p>
@@ -99,6 +100,8 @@ export default function ProductsPage() {
           </Link>
         </div>
       </section>
+
+      <PageCrossLinks excludeHref="/products" title="More to see" eyebrow="Navigate" />
     </div>
   );
 }
