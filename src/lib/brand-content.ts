@@ -37,6 +37,12 @@ export const leadershipTeam = [
     focus:
       "Systems, automation, and data — from IoT telemetry to the roadmap for AI-assisted crop planning.",
   },
+  {
+    name: "Tajudheen Backer",
+    role: "Scientific Lead",
+    focus:
+      "Petroleum engineer by training — he leads the science behind Ela: fluid behaviour, recirculation, nutrient chemistry, and how water and energy move through the greenhouse so growth stays predictable.",
+  },
 ] as const;
 
 export const saudiAgriSummary =

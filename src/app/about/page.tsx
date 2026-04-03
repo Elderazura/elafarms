@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Three friends, expert partners, and a Malayalam word for leaf — building a water-smart hydroponic farm in Saudi Arabia aligned with Vision 2030.",
+    "Four friends, expert partners, and a Malayalam word for leaf — building a water-smart hydroponic farm in Saudi Arabia aligned with Vision 2030.",
 };
 
 export default function AboutPage() {
@@ -89,12 +89,12 @@ export default function AboutPage() {
           <div className="grid gap-14 lg:grid-cols-2 lg:items-start">
             <ScrollReveal>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-ela-mid-green">The origin</p>
-              <h2 className="mt-4 font-heading text-3xl tracking-tight sm:text-4xl">Three friends — and a word that travelled.</h2>
+              <h2 className="mt-4 font-heading text-3xl tracking-tight sm:text-4xl">Four friends — and a word that travelled.</h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                Ela began as a conversation between three friends who shared roots in South India and a fascination with what
-                Saudi Arabia is building in agritech. We did not want another import story; we wanted a farm that could stand
-                beside the Kingdom’s best hospitality and retail — with produce that is honest, traceable, and unmistakably
-                fresh.
+                Ela began as a conversation between four friends who shared roots in South India and a fascination with what
+                Saudi Arabia is building in agritech — operations, technology, and the hard science of water and nutrients.
+                We did not want another import story; we wanted a farm that could stand beside the Kingdom’s best hospitality
+                and retail — with produce that is honest, traceable, and unmistakably fresh.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 Alongside us sits a growing circle of agronomists, systems engineers, and local operators — experts who make
@@ -132,11 +132,12 @@ export default function AboutPage() {
           <h2 className="mt-4 font-heading text-3xl tracking-tight sm:text-4xl">Founders at the helm.</h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
             Mohamed Afsal, Mohamed Irfan, and Salith Rashnad lead Ela as Managing Director, Chief Operations Officer, and
-            Chief Technology Officer — backed by specialists in crop science, automation, and commercial partnerships as we
-            scale.
+            Chief Technology Officer; Tajudheen Backer anchors the science as Scientific Lead — petroleum engineering applied
+            to how we move water and nutrients — with support from specialists in crop science, automation, and commercial
+            partnerships as we scale.
           </p>
         </ScrollReveal>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {leadershipTeam.map((person, i) => (
             <ScrollReveal key={person.name} delay={i * 0.06}>
               <article className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-md">

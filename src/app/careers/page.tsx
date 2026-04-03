@@ -48,10 +48,10 @@ export default function CareersPage() {
               A small team, an outsized mission.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-              Launch phase structure mirrors the strategy: three co-founders — Mohamed Afsal (Managing Director), Mohamed
-              Irfan (Chief Operations Officer), and Salith Rashnad (Chief Technology Officer) — plus key hires in growing,
-              operations, and commercial. Saudisation is integrated from the start, with training pathways for Saudi
-              technicians in partnership with agricultural institutes.
+              Launch phase structure mirrors the strategy: four co-founders — Mohamed Afsal (Managing Director), Mohamed
+              Irfan (Chief Operations Officer), Salith Rashnad (Chief Technology Officer), and Tajudheen Backer (Scientific
+              Lead, petroleum engineer) — plus key hires in growing, operations, and commercial. Saudisation is integrated
+              from the start, with training pathways for Saudi technicians in partnership with agricultural institutes.
             </p>
             <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">
               Saudi Arabia’s agricultural roadmap needs operators who respect data as much as plants: if you want to help
